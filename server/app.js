@@ -1,6 +1,9 @@
+require('dotenv').config() 
+// console.log(process.env.JWT_SECRET) // remove this after you've confirmed it is working
+
 const express = require('express');
 const app = express();
-const router = require("./routers/index");
+const router = require("./routes/index");
 const PORT = 3000;
 const errorHandler = require("./middlewares/errorHandler");
 
@@ -13,7 +16,7 @@ app.use(express.json());
 //to make end point/router
 app.use(router);
 //global middleware.Any router will go here if next() is executed
-app.use(errorHandler.handle);
+// app.use(errorHandler.handle);
 
 
 //app listener
