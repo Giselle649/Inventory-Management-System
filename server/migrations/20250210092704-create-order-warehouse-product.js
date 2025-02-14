@@ -7,10 +7,13 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        unique: true,
       },
       OrderId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+        unique: false,
         references: {
           model: "Orders",
           key: "id"
@@ -20,6 +23,8 @@ module.exports = {
       },
       WarehouseProductId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+        unique: false,
         references: {
           model: "WarehouseProducts",
           key: "id"
@@ -28,15 +33,19 @@ module.exports = {
         onDelete: "cascade"
       },
       quantity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        unique: false,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        unique: false,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        unique: false,
       }
     });
   },

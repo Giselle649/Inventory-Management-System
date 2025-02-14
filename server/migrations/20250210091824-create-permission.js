@@ -7,45 +7,68 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        unique: true
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
       },
-      itemPage: {
-        type: Sequelize.STRING
+      itemsPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
-      categoryPage: {
-        type: Sequelize.STRING
+      categoriesPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
-      warehousePage: {
-        type: Sequelize.STRING
+      warehousesPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
-      elementPage: {
-        type: Sequelize.STRING
+      elementsPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
-      productPage: {
-        type: Sequelize.STRING
+      productsPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
-      orderPage: {
-        type: Sequelize.STRING
+      ordersPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
-      memberPage: {
-        type: Sequelize.STRING
+      membersPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
-      permissionPage: {
-        type: Sequelize.STRING
+      permissionsPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
-      companyPage: {
-        type: Sequelize.STRING
+      companiesPage: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        unique: true
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        unique: true
       }
     });
   },

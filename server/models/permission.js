@@ -17,15 +17,15 @@ module.exports = (sequelize, DataTypes) => {
   }
   Permission.init({
     name: DataTypes.STRING,
-    itemPage: DataTypes.STRING,
-    categoryPage: DataTypes.STRING,
-    warehousePage: DataTypes.STRING,
-    elementPage: DataTypes.STRING,
-    productPage: DataTypes.STRING,
-    orderPage: DataTypes.STRING,
-    memberPage: DataTypes.STRING,
-    permissionPage: DataTypes.STRING,
-    companyPage: DataTypes.STRING
+    itemsPage: DataTypes.STRING,
+    categoriesPage: DataTypes.STRING,
+    warehousesPage: DataTypes.STRING,
+    elementsPage: DataTypes.STRING,
+    productsPage: DataTypes.STRING,
+    ordersPage: DataTypes.STRING,
+    membersPage: DataTypes.STRING,
+    permissionsPage: DataTypes.STRING,
+    companiesPage: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Permission',

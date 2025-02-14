@@ -7,10 +7,13 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        unique: true,
       },
       ProductId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+        unique: false,
         references: {
           model: "Products",
           key: "id"
@@ -20,6 +23,8 @@ module.exports = {
       },
       ElementValueId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+        unique: false,
         references: {
           model: "ElementValues",
           key: "id"
@@ -29,11 +34,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        unique: false,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        unique: false,
       }
     });
   },

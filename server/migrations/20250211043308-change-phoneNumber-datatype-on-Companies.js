@@ -21,6 +21,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    return queryInterface.changeColumn('Companies', 'phoneNumber')
+  
   }
 };
